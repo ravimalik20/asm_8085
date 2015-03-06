@@ -11,6 +11,10 @@
 ; instruction OUT which transfers the data of
 ; A to output port
 ; Syntax OUT <out_port_address>
+;
+; this can also mean turn on the pins
+; of the output port which can be connected
+; to the devices which will get turned on
 
 jmp start
 
@@ -23,10 +27,10 @@ start:	MVI B, 5fh
 
 	; output the contents of accumulator to
 	; output port identified by address 01h
-	; this can also mean turn on the first
-	; pin of the output port which can be
-	; connected to a device which will get 
-	; turned on
+	; It would take 3 machine cycles namely
+	; opcode fetch, memory read and I/O 
+	; write and a total of 10 T-states.	
 	OUT 01h
 
 hlt
+

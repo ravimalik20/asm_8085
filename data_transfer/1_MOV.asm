@@ -15,9 +15,19 @@ jmp start
 
 
 ;code
-start:	MVI A,0afh	; 2-byte instruction
-	MOV B,A		; 1-byte instruction
-	MOV C,A		; 1-byte instruction
+	; 2-byte instruction. Would require 
+	; 2 machine cycles, opcode fetch and
+	; memory read for instruction fetch 
+	; and a total of 7 T-states.
+start:	MVI A,0afh
+
+	; 1-byte instruction. Would require 1
+	; machine cycle of opcode fetch and a 
+	; total of 4 T-states
+	MOV B,A
+
+	; Same as MOV B,A
+	MOV C,A
 
 	MVI D,04h
 	MOV E,D
