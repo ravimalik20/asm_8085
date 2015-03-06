@@ -7,6 +7,9 @@ To learn something new, one effective approach is to learn by doing.
 Hence in my journey of learning by doing, the following repository is
 a collection of the 8085 assembly language programs which will help understand the 8085 microprocessor.
 
+All the source code is written in GNUSim8085 and due to this the code
+might slightly differ from the actual assembly code for the 8085.
+
 Hope it would be helpful to someone as it is for me.
 
 Cheers!!
